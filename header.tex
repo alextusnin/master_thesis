@@ -1,0 +1,56 @@
+\documentclass[%
+master,      % тип документа
+natbib,      % использовать пакет natbib для "сжатия" цитирований
+%subf,        % использовать пакет subcaption для вложенной нумерации рисунков
+href,        % использовать пакет hyperref для создания гиперссылок
+colorlinks,  % цветные гиперссылки
+%fixint,     % включить прямые знаки интегралов
+]{disser}
+\usepackage[
+  a4paper, mag=1000,
+  left=2.5cm, right=1cm, top=2cm, bottom=2cm, headsep=0.7cm, footskip=1cm
+]{geometry}
+\usepackage[intlimits]{amsmath}
+\usepackage{amssymb,amsfonts}
+
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english,russian]{babel}
+%\ifpdf\usepackage{epstopdf}\fi
+\usepackage[autostyle]{csquotes}
+
+\usepackage[intoc,nocfg,russian]{nomencl}
+\newcommand{\nomencl}[2]{#1 --- #2\nomenclature{#1}{#2}}
+\setlength{\nomlabelwidth}{3em}
+\setlength{\nomitemsep}{-\parsep}
+\renewcommand{\nomlabel}[1]{#1 ---}
+\makenomenclature
+
+\usepackage{subcaption}
+\usepackage{tikz,graphicx}
+\usetikzlibrary{decorations.pathmorphing, patterns,shapes}
+
+\newcommand{\eps}{\varepsilon}
+\newcommand{\sinc}{\mathrm{sinc}\;}
+\renewcommand{\vec}[1]{\mathbf{#1}}
+\renewcommand{\Re}{\textrm{Re}\,}
+
+\usepackage{mathtools}
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}%
+\DeclarePairedDelimiter\norm{\lVert}{\rVert}
+
+% Плавающие рисунки "в оборку".
+\usepackage{wrapfig}
+
+
+\renewcommand{\epsilon}{\varepsilon}
+\renewcommand{\kappa}{\varkappa}
+\renewcommand{\phi}{\varphi}
+\newcommand{\diff}{\mathrm{d}}
+
+
+
+\graphicspath{{./figures/}}
+% Включать подсекции в оглавление
+\setcounter{tocdepth}{2}
+
