@@ -368,14 +368,23 @@ $$
 \section{Сшивка полей при $z = 0$}
 Найдём коэффициенты $h_{\nu m}$ и $a_{km}$. Граничными условиями для полей $\mathbf{E}$ и $\mathbf{H}$. 
 \begin{align}
-    H_0 +  \sum_{m} \int_{-\infty}^{+\infty} a_{km} J_m(\varkappa r) \cos(k x) dk &= \sum_{m,\nu}c_\nu h_{\nu m}\cos(q_\nu x) J_m(\beta_\nu r), \ \abs{x} < \ell\label{eq:H_3d}  \\
-    -\sum_{m} \int_{-\infty}^{+\infty} m a_{km} J_m(\varkappa r) \cos(k x) dk &= \sum_{m,\nu}m c_\nu h_{\nu m}\cos(q_\nu x) J_m(\beta_\nu r)\Theta(\ell- \abs{x})  \label{eq:Ex_3d}.
+    H_0 +  \sum_{m} \int_{-\infty}^{+\infty} a_{km} J_m(\varkappa y) \cos(k x) dk &= \sum_{m,\nu}c_\nu h_{\nu m}\cos(q_\nu x) J_m(\beta_\nu y), \ \abs{x} < \ell\label{eq:H_3d}  \\
+    -\sum_{m} \int_{-\infty}^{+\infty} m a_{km} J_m(\varkappa y) \cos(k x) dk &= \sum_{m,\nu}m c_\nu h_{\nu m}\cos(q_\nu x) J_m(\beta_\nu y)\Theta(\ell- \abs{x})  \label{eq:Ex_3d}.
 \end{align}
 Здесь уравнение~(\ref{eq:H_3d}) даёт непрерывность магнитного поля на входе в щель, уравнение~(\ref{eq:Ex_3d}) обеспечивает непрерывность поля $Ex$.
 
 Домножив уравнение~(\ref{eq:Ex_3d}) на $e^{i k' x}$ и проинтегрировав по $x$ от $-\infty$ до $+\infty$ мы получаем следующее равенство
 \begin{equation}
-    -\sum_m m 2\pi a_{km} J_m{} 
+    -\sum_m m 2\pi a_{km} J_m(\varkappa y) = \sum_{m \nu} m c_\nu h_{\nu m} J_m(\beta_\nu y) L f_{q_\nu,k}.
+\end{equation}
+Интегрируя это выражение по $y$ и приравнивая члены при одинаковых $m$, мы выражаем $a_{km}$ через $h_{\nu m}$
+\begin{equation}
+    a_{km} = -\frac{L\varkappa}{2 \pi} \sum_{\nu} c_\nu h_{\nu m} \frac{f_{q_\nu,k}}{\beta_\nu}.
+    \label{eq:akm_3D}
+\end{equation}
+Поставляя~(\ref{eq:akm_3D}) в~(\ref{eq:H_3d}), умножая на $\cos(q_\mu x)$ и интегрируя по щели, мы получаем уравнение на $h_{\nu m}$ \textcolor{red}{Проверить коэффициент при $\mu =0$ при интегрировании вдоль щели}
+\begin{equation}
+    \sum_m c_\mu h_{\mu m} J_m(\beta_\mu y) + \sum_{m,\nu} L c_\nu \frac{h_{\nu m}}{2\pi \beta_\nu} \int \varkappa f_{k,q_\mu}f_{k,q_\nu} J_m(\varkappa y) = \frac{1}{L}\int_{-L}^{L} H_0 \cos(q_\mu x) dx 
 \end{equation}
 \section{Приближение узкой щели}
 
