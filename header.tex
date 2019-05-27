@@ -8,16 +8,27 @@ colorlinks,  % цветные гиперссылки
 ]{disser}
 \usepackage[
   a4paper, mag=1000,
-  left=2.5cm, right=1cm, top=2cm, bottom=2cm, headsep=0.7cm, footskip=1cm
+  %left=2.5cm, right=1cm, top=2cm, bottom=2cm, headsep=0.7cm, footskip=1cm
+  left=3cm, right=1.5cm, top=2cm, bottom=2cm, headsep=0.7cm, footskip=1cm
 ]{geometry}
+\usepackage{pdfpages}
 \usepackage[intlimits]{amsmath}
 \usepackage{amssymb,amsfonts}
 
 \usepackage[T2A]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage[english,russian]{babel}
+%\usepackage[
+%backend=biber,
+%style=numeric,
+%sorting=ynt
+%]{biblatex}
+%\usepackage[utf8]{inputenc}
+\linespread{1.3}   %one half line spacing
+\usepackage[russian]{babel}
 %\ifpdf\usepackage{epstopdf}\fi
 \usepackage[autostyle]{csquotes}
+\usepackage{appendix}
 
 \usepackage[intoc,nocfg,russian]{nomencl}
 \newcommand{\nomencl}[2]{#1 --- #2\nomenclature{#1}{#2}}
@@ -34,6 +45,7 @@ colorlinks,  % цветные гиперссылки
 \newcommand{\sinc}{\mathrm{sinc}\;}
 \renewcommand{\vec}[1]{\mathbf{#1}}
 \renewcommand{\Re}{\textrm{Re}\,}
+\renewcommand{\Im}{\textrm{Im}\,}
 
 \usepackage{mathtools}
 \DeclarePairedDelimiter\abs{\lvert}{\rvert}%
@@ -53,4 +65,3 @@ colorlinks,  % цветные гиперссылки
 \graphicspath{{./figures/}}
 % Включать подсекции в оглавление
 \setcounter{tocdepth}{2}
-

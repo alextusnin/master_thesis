@@ -1,51 +1,21 @@
 \include{header}
-
+%\addbibresource{biblio.bib}
 \begin{document}
-\institution{Новосибирский Государственный Университет}
-
-% Имя лица, допускающего к защите (зав. кафедрой)
-\apname{ Академик РАН, д.ф.-м.н., Шалагин Анатолий Михайлович}
-
-\title{ДИССЕРТАЦИЯ\\[-14pt]на соискание степени\\МАГИСТРА}
-
-\topic{Изучение плазмонной силы между проводящими плоскостями}
-
-% Автор
-\author{Туснин Александр Константинович}
-% Группа
-\group{17361}
-% Номер направления
-\coursenum{03.04.02}
-\course{03.04.02}
-% Номер магистерской программы
-\masterprognum{03.04.02}
-\masterprog   {Физика оптических явлений}
-
-% Научный руководитель
-\sa      {Шапиро Давид Абрамович}
-\sastatus{д.~ф.-м.~н., профессор}
-% Второй научный руководитель
-%\sasnd      {ФИО руководителя}
-%\sasndstatus{д.~ф.-м.~н., ст.~н.~с.}
-
-% Рецензент
-\rev      {ФИО рецензента}
-\revstatus{д.~ф.-м.~н., в.~н.~с.}
-
-\city{Новосибирск}
-\date{\number\year}
-
-\maketitle
-
+%\maketitle
+\includepdf{titlepage_master}
 \tableofcontents
 
 \input{intro}
 \input{mainsection}
 \input{conclusion}
+\input{appendix}
+
 \let\BibEmph=\emph
 \bibliographystyle{gost2008}
 
 % Список литературы
-\bibliography{biblio}
-
+\bibliography{biblio.bib}
+%\medskip
+ 
+%\printbibliography
 \end{document}
