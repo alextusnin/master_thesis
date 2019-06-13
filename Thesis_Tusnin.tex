@@ -1,5 +1,4 @@
 \include{header}
-%\addbibresource{biblio.bib}
 \begin{document}
 %\maketitle
 \includepdf{titlepage_master}
@@ -11,10 +10,14 @@
 \input{appendix}
 
 \let\BibEmph=\emph
-\bibliographystyle{gost2008}
+\bibliographystyle{gost3}
+%\bibliographystyle{gost2008}
+%\bibliographystyle{utf8gost705u}
 
 % Список литературы
-\bibliography{biblio.bib}
+%\inputencoding{cp1251}
+\bibliography{biblio}
+%\inputencoding{utf8}
 %\medskip
  
 %\printbibliography

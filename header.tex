@@ -2,7 +2,7 @@
 master,      % тип документа
 natbib,      % использовать пакет natbib для "сжатия" цитирований
 %subf,        % использовать пакет subcaption для вложенной нумерации рисунков
-href,        % использовать пакет hyperref для создания гиперссылок
+%href,        % использовать пакет hyperref для создания гиперссылок
 colorlinks,  % цветные гиперссылки
 %fixint,     % включить прямые знаки интегралов
 ]{disser}
@@ -11,13 +11,19 @@ colorlinks,  % цветные гиперссылки
   %left=2.5cm, right=1cm, top=2cm, bottom=2cm, headsep=0.7cm, footskip=1cm
   left=3cm, right=1.5cm, top=2cm, bottom=2cm, headsep=0.7cm, footskip=1cm
 ]{geometry}
+\usepackage[hyphens]{url}%для переноса строки в ссылках
+\usepackage{hyperref}
+
+
 \usepackage{pdfpages}
 \usepackage[intlimits]{amsmath}
 \usepackage{amssymb,amsfonts}
 
+\usepackage{mathtext}
 \usepackage[T2A]{fontenc}
-\usepackage[utf8]{inputenc}
-\usepackage[english,russian]{babel}
+%\usepackage{ucs}
+\usepackage[utf8]{inputenc}  % или какая у тебя там входная кодировка
+\usepackage[russian]{babel}
 %\usepackage[
 %backend=biber,
 %style=numeric,
@@ -25,7 +31,6 @@ colorlinks,  % цветные гиперссылки
 %]{biblatex}
 %\usepackage[utf8]{inputenc}
 \linespread{1.3}   %one half line spacing
-\usepackage[russian]{babel}
 %\ifpdf\usepackage{epstopdf}\fi
 \usepackage[autostyle]{csquotes}
 \usepackage{appendix}
